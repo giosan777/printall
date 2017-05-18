@@ -6,42 +6,32 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
+    <link rel="stylesheet" type="text/css" href="../resources/css/index_style/style_main.css"/>
     <title>Facelet Title</title>
-    <h:outputStylesheet library="css" name="style_main.css"/>
+    <h:outputStylesheet library="css" name="/index_style/style_main.css"/>
 
 </h:head>
 
 <h:body>
 
     <ui:composition>
-
-        <div class="logo">
-            <h:graphicImage library="images" name="img_header/logo.png" width="90" height="60"/>
+        <div>
+            <table id="table">
+                <tbody>
+                <tr>
+                    <td id="logo">
+                        <a href="#"><h:graphicImage library="images" name="img_header/logo.png" width="100px"
+                                                    height="60px"/></a></td>
+                    <td><a href="#">#{msg.sheqmeni_shenit}</a></td>
+                    <td><a href="#">#{msg.katalogi}</a></td>
+                    <td><a href="#">mesame</a></td>
+                    <td><a href="#">meotxe</a></td>
+                    <td id="mail"><h:graphicImage library="images" name="img_header/mail.png" width="120px"
+                                                  height="60px"/></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-
-        <div class="descr">
-            <h3>#{msg.welcome_title}</h3>
-
-        </div>
-
-        <!--<div class="welcome">-->
-        <!--<h5>#{msg.welcome}</h5>-->
-        <!--<h6>#{msg.exit}</h6>-->
-        <!--</div>-->
-
-
-        <!--<div class="search_div">-->
-        <!--<h:form styleClass="search_form">-->
-        <!--<h:inputText id="search_string" styleClass="search_string"/>-->
-        <!--<h:commandButton value="#{msg.search}" styleClass="search_button"/>-->
-
-        <!--<h:selectOneMenu value="#{searchController.searchType}">-->
-        <!--<f:selectItems value="${searchController.searchList}"/>-->
-        <!--</h:selectOneMenu>-->
-
-        <!--</h:form>-->
-        <!--</div>-->
-
     </ui:composition>
 
 
