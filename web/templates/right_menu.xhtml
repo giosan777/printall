@@ -5,7 +5,25 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<f:view>
-    <h:outputLabel value="right menu"/>
-</f:view>
+<h:head>
+    <title>Facelet Title</title>
+    <h:outputStylesheet library="css" name="/index_style/style_main.css"/>
+</h:head>
+
+<h:body>
+
+<ui:composition>
+    <script type="text/javascript" src="#{resource['js/slidejs.js']}"/>
+    <div>
+        <ul id="slides">
+            <li class="slide showing">Slide 1</li>
+            <li class="slide">Slide 2</li>
+            <li class="slide">Slide 3</li>
+            <li class="slide">Slide 4</li>
+            <li class="slide">Slide 5</li>
+        </ul>
+    </div>
+</ui:composition>
+
+</h:body>
 </html>
