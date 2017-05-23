@@ -13,57 +13,16 @@
 
 <h:body>
     <ui:composition>
-        <script type="text/javascript">
-            all_images = [
-                "#{resource['images/img_slide/cxovelebi.png']}",
-                "#{resource['images/img_slide/avto.png']}",
-                "#{resource['images/img_slide/fentezi.png']}",
-                "#{resource['images/img_slide/kino.png']}",
-                "#{resource['images/img_slide/musika.png']}",
-                "#{resource['images/img_slide/smailebi.png']}",
-                "#{resource['images/img_slide/siyvaruli.png']}",
-                "#{resource['images/img_slide/tamashebi.png']}"
-            ];
-            var ImgNum = 0;
-            var ImgLength = all_images.length - 1;
-            var delay = 2000;
-            var lock = false;
-            var run;
-
-            function chgImgw(direction) {
-                if (document.images) {
-                    ImgNum = ImgNum + direction;
-                    if (ImgNum > ImgLength) {
-                        ImgNum = 0;
-                    }
-                    document.slide_showw.src = all_images[ImgNum];
-                }
-            }
-
-            function autow() {
-                if (lock == true) {
-                    lock = false;
-                    window.clearInterval(run);
-                }
-                else if (lock == false) {
-                    lock = true;
-                    run = setInterval("chgImgw(1)", delay);
-                }
-            }
-        </script>
         <div class="slaid_div">
             <table border="0" width="160">
                 <tr>
-                    <td colspan="3"><a href="#"> <img name="slide_showw" border="0"
-                                                      src="#{resource['images/img_slide/tamashebi.png']}"
-                                                      alt="" width="145" height="270"/></a></td>
+                    <td colspan="3"><a href="../sales.xhtml"> <img name="slide_showw" border="0"
+                                                      src="#{resource['images/img_slide/aqcia.png']}"
+                                                      alt="" width="145" height="370"/></a></td>
                 </tr>
 
             </table>
         </div>
-        <script type="text/javascript">
-            autow();
-        </script>
     </ui:composition>
 </h:body>
 

@@ -80,7 +80,7 @@ tr > td {
 .left_menu {
     width: 200px;
     height: 1000px;
-    background-image: url("#{resource['images/img_header/gverdi.png']}");
+    background-image: url("#{resource['images/img_slide/gverdi.png']}");
     background-size: cover;
     position: relative;
     float: left;
@@ -99,7 +99,7 @@ tr > td {
 .right_menu {
     width: 200px;
     height: 1000px;
-    background-image: url("#{resource['images/img_header/gverdi.png']}");
+    background-image: url("#{resource['images/img_slide/gverdi.png']}");
     background-size: cover;
     position: relative;
     float: right;
