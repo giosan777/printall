@@ -8,22 +8,63 @@
 <h:head>
     <title>Facelet Title</title>
     <h:outputStylesheet library="css" name="/index_style/style_main.css"/>
+
 </h:head>
 
 <h:body>
+    <ui:composition>
+        <script type="text/javascript">
+            all_images = [
+                "#{resource['images/img_slide/cxovelebi.png']}",
+                "#{resource['images/img_slide/avto.png']}",
+                "#{resource['images/img_slide/fentezi.png']}",
+                "#{resource['images/img_slide/kino.png']}",
+                "#{resource['images/img_slide/musika.png']}",
+                "#{resource['images/img_slide/smailebi.png']}",
+                "#{resource['images/img_slide/siyvaruli.png']}",
+                "#{resource['images/img_slide/tamashebi.png']}"
+            ];
+            var ImgNum = 0;
+            var ImgLength = all_images.length - 1;
+            var delay = 2000;
+            var lock = false;
+            var run;
 
-<ui:composition>
-    <script type="text/javascript" src="#{resource['js/js_slide.js']}"/>
-    <div>
-        <ul id="slides">
-            <li class="slide showing">Slide 1</li>
-            <li class="slide">Slide 2</li>
-            <li class="slide">Slide 3</li>
-            <li class="slide">Slide 4</li>
-            <li class="slide">Slide 5</li>
-        </ul>
-    </div>
-</ui:composition>
+            function chgImg(direction) {
+                if (document.images) {
+                    ImgNum = ImgNum + direction;
+                    if (ImgNum > ImgLength) {
+                        ImgNum = 0;
+                    }
+                    document.slide_show.src = all_images[ImgNum];
+                }
+            }
+
+            function auto() {
+                if (lock == true) {
+                    lock = false;
+                    window.clearInterval(run);
+                }
+                else if (lock == false) {
+                    lock = true;
+                    run = setInterval("chgImg(1)", delay);
+                }
+            }
+        </script>
+        <div class="slaid_div">
+            <table border="0" width="160">
+                <tr>
+                    <td colspan="3"><a href="#"> <img name="slide_show" border="0"
+                                                      src="#{resource['images/img_slide/tamashebi.png']}"
+                                                      alt="" width="145" height="270"/></a></td>
+                </tr>
+
+            </table>
+        </div>
+        <script type="text/javascript">
+            auto();
+        </script>
+    </ui:composition>
 
 </h:body>
 </html>
