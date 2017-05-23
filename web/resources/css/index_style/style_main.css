@@ -67,9 +67,9 @@ tr > td {
     white-space: nowrap;
 }
 
-/*.box div {
+.box div {
     display: inline-block;
-}*/
+}
 
 .footer {
     padding: 0;
