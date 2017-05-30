@@ -11,8 +11,18 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="a.xml" value="fc0eea59-45b7-4455-bcb8-c9dda54915ea" />
+          <unit-entry name="ge:printall:hibernate.cfg.xml" value="383dd353-9419-496f-9e8a-e4317ddf6477" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ge/printall/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
@@ -21,5 +31,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Mojarra-2.2.1" level="project" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" exported="" name="Hibernate 5.2.9-5.2.9" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.42-bin" level="project" />
   </component>
 </module>
