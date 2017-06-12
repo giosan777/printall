@@ -13,10 +13,7 @@
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map>
-          <unit-entry name="a.xml" value="fc0eea59-45b7-4455-bcb8-c9dda54915ea" />
-          <unit-entry name="ge:printall:hibernate.cfg.xml" value="383dd353-9419-496f-9e8a-e4317ddf6477" />
-        </datasource-map>
+        <datasource-map />
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/ge/printall/hibernate.cfg.xml" />
       </configuration>
@@ -30,8 +27,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Mojarra-2.2.1" level="project" />
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" exported="" name="Hibernate 5.2.9-5.2.9" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-5.1.42-bin" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///media/giorgi/5C9046049045E55C/IDEA_INSTALLED/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Hibernate 5.2.9-5.2.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.2 - JSF" level="application_server_libraries" />
   </component>
 </module>
